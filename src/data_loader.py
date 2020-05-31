@@ -8,7 +8,6 @@ import datetime
 import pandas as pd
 
 
-
 def make_df(dirpath="../input_data", tile="h27v07"):
     qpath  =  os.path.join(dirpath, "*."+tile+".006*.hdf")
     pathes = list(set(glob.glob(qpath)))
@@ -23,21 +22,22 @@ def make_df(dirpath="../input_data", tile="h27v07"):
     return df
 
 def load(path):
-    print(path)
+    #print(path)
     file = SD(path , SDC.READ)
     keys = file.datasets()
-    data = file.select(keys)
     dic = {}
-    print(data)
-    for k,da in zip(keys, data):
-        dic[k] = da[:,:]  
+
+    for k in keys:
+        dic[k] = np.array(file.select(k)[:,:] )
+    return dic
 
 
 def main():
-    df = make_df()
+    df = make_df("../input_data/data_h27v07")
     print(df)
     val = load(df["path"].iloc[0])
-    plt.show(val["Lai_500m"])
+    plt.imshow(val["Lai_500m"])
+    plt.show()
 
 if __name__=="__main__":
     main()
