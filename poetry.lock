@@ -1027,6 +1027,14 @@ version = "1.0.4"
 
 [[package]]
 category = "main"
+description = "Python-HDF4: Python interface to the NCSA HDF4 library."
+name = "python-hdf4"
+optional = false
+python-versions = "*"
+version = "0.9.2"
+
+[[package]]
+category = "main"
 description = "World timezone definitions, modern and historical"
 name = "pytz"
 optional = false
@@ -1400,7 +1408,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "69830203f60908c6d1f44a616436c3d9739beec6fa09c028daee8a549e49e550"
+content-hash = "7d3f4dba1c350ebf30622407863cc17dac22df44df4368afaa1cd38957f5c440"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -1870,6 +1878,9 @@ python-editor = [
     {file = "python_editor-1.0.4-py2.7.egg", hash = "sha256:ea87e17f6ec459e780e4221f295411462e0d0810858e055fc514684350a2f522"},
     {file = "python_editor-1.0.4-py3-none-any.whl", hash = "sha256:1bf6e860a8ad52a14c3ee1252d5dc25b2030618ed80c022598f00176adc8367d"},
     {file = "python_editor-1.0.4-py3.5.egg", hash = "sha256:c3da2053dbab6b29c94e43c486ff67206eafbe7eb52dbec7390b5e2fb05aac77"},
+]
+python-hdf4 = [
+    {file = "python-hdf4-0.9.2.tar.gz", hash = "sha256:0543f002ff17cec2291fd2c97f6743eeeee5e7975337191e10868fa9fdbd5d03"},
 ]
 pytz = [
     {file = "pytz-2020.1-py2.py3-none-any.whl", hash = "sha256:a494d53b6d39c3c6e44c3bec237336e14305e4f29bbf800b599253057fbb79ed"},
