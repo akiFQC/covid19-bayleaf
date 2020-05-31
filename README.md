@@ -22,8 +22,7 @@ From this video, we were able to obtain information on the time scale of the veg
 
 Next, in order to observe the changes in higher resolution and longer time span, a 5 km square data point was extracted and projected into two-dimensional space using t-SNE. It gives us the visual information to detect outliers at a glance. It is likely that the points corresponding to outliers in the projected two-dimensional space have a different way of changing vegetation than other points.
 
-![image](images/tSNE_20190201-0601.png)
-![image](images/tSNE_20200201-0601.png)
+![image](./images/tSNE.png)
 
 If the location of that point is close to a human settlement, it may be under the influence of COVID-19, so you'll need to direct your attention to that area. When this visualization method is applied to data over a longer time span, it is expected that it can be used to detect anomalous movements in the data and predict infectious diseases.
 
