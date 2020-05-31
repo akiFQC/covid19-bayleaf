@@ -8,15 +8,18 @@ import datetime
 import pandas as pd
 
 
+
 def make_df(dirpath="../input_data", tile="h27v07"):
     qpath  =  os.path.join(dirpath, "*."+tile+".006*.hdf")
     pathes = list(set(glob.glob(qpath)))
     print(pathes)
     df = pd.DataFrame(columns= ["date", "path"])
 
+
     for pa in pathes:
         datestr = pa.split(".")[-5]
         datestr = datestr[1:]
+
         date = datetime.datetime.strptime(datestr, "%Y%j")
         df=df.append({"date":date, "path":pa}, ignore_index=True)
     return df
@@ -39,5 +42,5 @@ def main():
     plt.imshow(val["Lai_500m"])
     plt.show()
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()
