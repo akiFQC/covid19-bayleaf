@@ -8,9 +8,10 @@ import datetime
 import pandas as pd
 
 
+
 def load(dirpath="../input_data", tile="h27v07"):
     qpath  =  os.path.join(dirpath, "*."+tile+".006*.hdf")
-    pathes = glob.glob(qpath)
+    pathes = list(set(glob.glob(qpath)))
     print(pathes)
     file = SD(pathes[0])
     datasets_dic = file.datasets()
@@ -34,7 +35,9 @@ def main():
     df = load()
 
     print(df)
-
+    print(df["Lai_500m"], type(df["Lai_500m"]))
+    plt.imshow(df["Lai_500m"].iloc[0])
+    plt.show()
 
 if __name__=="__main__":
     main()
