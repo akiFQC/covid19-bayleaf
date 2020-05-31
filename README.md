@@ -18,6 +18,8 @@ From this video, we were able to obtain information on the time scale of the veg
 
 [video link](https://drive.google.com/open?id=1GPR3YeYB1yuMvK3K43Gc82oTCOdFkcsO)
 
+![image](images/LAI.png)
+
 ![image](images/Figure_1.png)
 
 Next, in order to observe the changes in higher resolution and longer time span, a 5 km square data point was extracted and projected into two-dimensional space using t-SNE. It gives us the visual information to detect outliers at a glance. It is likely that the points corresponding to outliers in the projected two-dimensional space have a different way of changing vegetation than other points.
