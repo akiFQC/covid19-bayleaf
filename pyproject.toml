@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "covid19_tribes"
+name = "covid19_bayleaf"
 version = "0.1.0"
 description = ""
 authors = ["Masashi Sode <masashi.sode@gmail.com>"]
